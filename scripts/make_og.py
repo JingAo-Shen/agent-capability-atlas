@@ -75,7 +75,7 @@ def main():
     # Tool chips
     chip_font = ImageFont.truetype(CJK_REGULAR, 19)
     x, y = 80, 500
-    for name in ("MinerU", "OpenMontage", "VoiceStudio", "DeepSeek Harness", "moli"):
+    for name in ("MinerU", "OpenMontage", "VoiceStudio", "DeepSeek Harness", "Astryx", "shadcn/ui"):
         width = draw.textlength(name, font=chip_font) + 38
         if x + width > 1120:
             break

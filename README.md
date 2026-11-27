@@ -4,13 +4,13 @@
 
 一份面向个人电脑与 Agent 的实用工具清单，记录好用的工具、适用场景、使用边界与官方来源。**只做收录，不提供安装教程。**
 
-**69 项工具与运行环境 · 13 个能力领域 · 14 项近期热门**
+**76 项工具与运行环境 · 14 个能力领域 · 17 项近期热门**
 
 **在线浏览**：<https://jingao-shen.github.io/agent-capability-atlas/>
 
 [![Link check](https://github.com/JingAo-Shen/agent-capability-atlas/actions/workflows/link-check.yml/badge.svg)](https://github.com/JingAo-Shen/agent-capability-atlas/actions/workflows/link-check.yml)
 
-**分类**：[运行底座](#运行底座) · [Agent 框架与技能](#agent-框架与技能) · [浏览器与桌面](#浏览器与桌面) · [文档与 OCR](#文档与-ocr) · [数据与记忆](#数据与记忆) · [语音能力](#语音能力) · [音视频与图像](#音视频与图像) · [本地模型与生成](#本地模型与生成) · [逆向与诊断](#逆向与诊断) · [3D 与工程](#3d-与工程) · [科学计算](#科学计算) · [文件与备份](#文件与备份) · [接口与编排](#接口与编排)
+**分类**：[运行底座](#运行底座) · [Agent 框架与技能](#agent-框架与技能) · [浏览器与桌面](#浏览器与桌面) · [文档与 OCR](#文档与-ocr) · [数据与记忆](#数据与记忆) · [语音能力](#语音能力) · [音视频与图像](#音视频与图像) · [本地模型与生成](#本地模型与生成) · [逆向与诊断](#逆向与诊断) · [3D 与工程](#3d-与工程) · [科学计算](#科学计算) · [文件与备份](#文件与备份) · [接口与编排](#接口与编排) · [前端与设计](#前端与设计)
 
 ## 如何浏览
 
@@ -158,6 +158,18 @@
 | [FastMCP](https://gofastmcp.com/getting-started/welcome) | MCP / Python | Win / macOS / Linux | 轻量 | 把已有 Python 函数和服务封装成 Agent 可调用的 MCP 工具。 |
 | [FastAPI](https://github.com/fastapi/fastapi) | API / Python | Win / macOS / Linux | 轻量 | 把本地脚本封装为有参数校验的 HTTP API。 |
 | [Magpie](https://github.com/yetone/magpie) | API / CLI | Win / macOS / Linux | 轻量 | 把已付费的多个模型订阅池化，在一个本地端点里按可用性自动切换。 |
+
+### 前端与设计
+
+| 工具 | 接口 | 平台 | 资源 | 一句话说明 |
+| --- | --- | --- | --- | --- |
+| [Astryx](https://github.com/meta/astryx) | React / TypeScript | Win / macOS / Linux | 轻量 | Meta 开源的 Agent 友好设计系统：可完全定制的组件、令牌与主题，方便编码 Agent 直接产出统一界面。 |
+| [shadcn/ui](https://github.com/shadcn-ui/ui) | CLI / React | Win / macOS / Linux | 轻量 | 复制到项目里的组件集合：代码可改、可扩展，是编码 Agent 最熟悉的 React 组件来源之一。 |
+| [awesome-design-md](https://github.com/VoltAgent/awesome-design-md) | Markdown / Agent 技能 | Win / macOS / Linux | 轻量 | 收集各大品牌设计系统的 DESIGN.md，放进项目即可让编码 Agent 生成风格匹配的界面。 |
+| [taste-skill](https://github.com/Leonxlnx/taste-skill) | Agent 技能 | Win / macOS / Linux | 轻量 | 给编码 Agent 补上审美与设计判断：艺术方向、参考图与浏览器验收，减少模板化页面。 |
+| [CopilotKit](https://github.com/CopilotKit/CopilotKit) | React / API | Win / macOS / Linux | 中等 | 面向 Agent 与生成式 UI 的前端栈：把聊天、工具调用和可交互组件接进 React、Angular 或移动端。 |
+| [assistant-ui](https://github.com/assistant-ui/assistant-ui) | React | Win / macOS / Linux | 轻量 | 用于 AI 聊天的 React 组件库：消息流、输入框、附件与工具调用界面开箱可用。 |
+| [Onlook](https://github.com/onlook-dev/onlook) | GUI / Agent | Win / macOS / Linux | 中等 | AI 优先的开源设计工具：在真实代码上可视化编辑样式与布局，并让 Agent 参与改动。 |
 
 ## 收录说明
 

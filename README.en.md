@@ -4,13 +4,13 @@
 
 A curated list of practical tools for personal computers and agents: what each tool does, where it fits, its limits, and the official source. **A catalog, not an installation guide.**
 
-**69 tools and runtimes · 13 capability areas · 14 recent trending projects**
+**76 tools and runtimes · 14 capability areas · 17 recent trending projects**
 
 **Live site**: <https://jingao-shen.github.io/agent-capability-atlas/>
 
 [![Link check](https://github.com/JingAo-Shen/agent-capability-atlas/actions/workflows/link-check.yml/badge.svg)](https://github.com/JingAo-Shen/agent-capability-atlas/actions/workflows/link-check.yml)
 
-**Categories**: [Runtime foundations](#runtime-foundations) · [Agent frameworks & skills](#agent-frameworks--skills) · [Browser & desktop](#browser--desktop) · [Documents & OCR](#documents--ocr) · [Data & memory](#data--memory) · [Voice & speech](#voice--speech) · [Audio, video & images](#audio-video--images) · [Local models & generation](#local-models--generation) · [Reverse engineering](#reverse-engineering) · [3D & engineering](#3d--engineering) · [Scientific computing](#scientific-computing) · [Files & backup](#files--backup) · [Interfaces & orchestration](#interfaces--orchestration)
+**Categories**: [Runtime foundations](#runtime-foundations) · [Agent frameworks & skills](#agent-frameworks--skills) · [Browser & desktop](#browser--desktop) · [Documents & OCR](#documents--ocr) · [Data & memory](#data--memory) · [Voice & speech](#voice--speech) · [Audio, video & images](#audio-video--images) · [Local models & generation](#local-models--generation) · [Reverse engineering](#reverse-engineering) · [3D & engineering](#3d--engineering) · [Scientific computing](#scientific-computing) · [Files & backup](#files--backup) · [Interfaces & orchestration](#interfaces--orchestration) · [Frontend & design](#frontend--design)
 
 ## Browse
 
@@ -158,6 +158,18 @@ Every tool name in the tables below links to its official project or documentati
 | [FastMCP](https://gofastmcp.com/getting-started/welcome) | MCP / Python | Win / macOS / Linux | Light | Build MCP servers in Python. |
 | [FastAPI](https://github.com/fastapi/fastapi) | API / Python | Win / macOS / Linux | Light | Typed HTTP APIs with automatic docs. |
 | [Magpie](https://github.com/yetone/magpie) | API / CLI | Win / macOS / Linux | Light | Pool and fail over model subscriptions behind one endpoint. |
+
+### Frontend & design
+
+| Tool | Interface | Platform | Footprint | What it does |
+| --- | --- | --- | --- | --- |
+| [Astryx](https://github.com/meta/astryx) | React / TypeScript | Win / macOS / Linux | Light | Meta's agent-ready design system with customizable components, tokens and themes. |
+| [shadcn/ui](https://github.com/shadcn-ui/ui) | CLI / React | Win / macOS / Linux | Light | Composable React components copied into your project as editable source. |
+| [awesome-design-md](https://github.com/VoltAgent/awesome-design-md) | Markdown / Agent skill | Win / macOS / Linux | Light | DESIGN.md snapshots of brand design systems for coding agents. |
+| [taste-skill](https://github.com/Leonxlnx/taste-skill) | Agent skill | Win / macOS / Linux | Light | Agent skills that add art direction and browser-checked design taste. |
+| [CopilotKit](https://github.com/CopilotKit/CopilotKit) | React / API | Win / macOS / Linux | Medium | Frontend stack for agents and generative UI across React, Angular and mobile. |
+| [assistant-ui](https://github.com/assistant-ui/assistant-ui) | React | Win / macOS / Linux | Light | React components for AI chat: message stream, composer and tool calls. |
+| [Onlook](https://github.com/onlook-dev/onlook) | GUI / Agent | Win / macOS / Linux | Medium | AI-first design tool that edits real code visually with agent help. |
 
 ## Scope and caveats
 
