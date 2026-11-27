@@ -1,29 +1,40 @@
 """Build the standalone HTML using only Python's standard library."""
 import argparse
-import base64
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-FIELDS = {"name", "cat", "api", "os", "load", "tier", "desc", "connect", "note", "task", "url"}
+REQUIRED = ("name", "cat", "api", "os", "load", "tier", "desc", "connect", "note", "task", "url")
+OPTIONAL = {"stars": int, "hot": bool}
 
-def build():
-    data = json.loads((ROOT / "data/tools.json").read_text(encoding="utf-8"))
+
+def validate(data):
     if not data or len({item["name"] for item in data}) != len(data):
         raise ValueError("Tool names must be unique and the catalog must not be empty")
     for item in data:
-        if set(item) != FIELDS or not all(isinstance(v, str) and v.strip() for v in item.values()):
-            raise ValueError("Each tool must have all required nonempty string fields")
+        for field in REQUIRED:
+            if field not in item or not isinstance(item[field], str) or not item[field].strip():
+                raise ValueError(f"{item.get('name', '?')}: missing nonempty string field {field}")
+        for field, kind in OPTIONAL.items():
+            if field in item and not isinstance(item[field], kind):
+                raise ValueError(f"{item['name']}: {field} must be {kind.__name__}")
+        unknown = set(item) - set(REQUIRED) - set(OPTIONAL)
+        if unknown:
+            raise ValueError(f"{item['name']}: unexpected fields {sorted(unknown)}")
         if not item["url"].startswith("https://"):
             raise ValueError("Source links must use HTTPS")
+
+
+def build():
+    data = json.loads((ROOT / "data/tools.json").read_text(encoding="utf-8"))
+    validate(data)
     template = (ROOT / "src/template.html").read_text(encoding="utf-8")
-    for marker in ("__DATA__", "__INSTALLER_BASE64__"):
-        if template.count(marker) != 1:
-            raise ValueError(f"Expected one {marker} placeholder")
-    payload = base64.b64encode((ROOT / "install-agent-starter.ps1").read_bytes()).decode("ascii")
-    # Escape angle brackets so future catalog text cannot terminate the script tag.
+    if template.count("__DATA__") != 1:
+        raise ValueError("Expected one __DATA__ placeholder")
+    # Escape angle brackets so catalog text cannot terminate the script tag.
     serialized = json.dumps(data, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e")
-    return template.replace("__DATA__", serialized).replace("__INSTALLER_BASE64__", payload)
+    return template.replace("__DATA__", serialized)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -37,4 +48,4 @@ if __name__ == "__main__":
         print("Catalog validation and reproducible build check passed")
     else:
         output.write_text(result, encoding="utf-8")
-        print("Built index.html")
+        print(f"Built index.html with {len(json.loads((ROOT / 'data/tools.json').read_text(encoding='utf-8')))} tools")

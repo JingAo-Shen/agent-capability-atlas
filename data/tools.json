@@ -65,6 +65,64 @@
     "url": "https://learn.microsoft.com/en-us/windows/wsl/about"
   },
   {
+    "name": "DeepSeek Harness",
+    "cat": "Agent 框架与技能",
+    "api": "CLI",
+    "os": "跨平台",
+    "load": "中等",
+    "tier": "按需安装",
+    "desc": "插件化的 Agent 运行框架：模型、工具与界面都可替换，适合搭自己的本地 Agent 环境。",
+    "connect": "命令行启动，通过插件接入模型与工具；Agent 可直接调用其 CLI。",
+    "note": "生态更新快、插件质量参差；配置与迁移成本需要自行评估。",
+    "task": "用一个终端 Agent 统一调度本地文档与脚本工具。",
+    "url": "https://github.com/deepseek-ai/deepseek-harness",
+    "stars": 287808,
+    "hot": true
+  },
+  {
+    "name": "OpenClaw",
+    "cat": "Agent 框架与技能",
+    "api": "CLI / API",
+    "os": "跨平台",
+    "load": "中等",
+    "tier": "按需安装",
+    "desc": "强调真正执行任务的个人 AI 助手，跨系统运行，数据留在自己的设备与账号里。",
+    "connect": "本地运行，通过消息渠道或命令行对话，并可挂接工具与技能。",
+    "note": "高权限意味着高风险：先限定可访问的目录、账号与操作范围。",
+    "task": "让它整理下载目录、归档发票并生成月度清单。",
+    "url": "https://github.com/openclaw/openclaw",
+    "stars": 395323,
+    "hot": true
+  },
+  {
+    "name": "Anthropic Skills",
+    "cat": "Agent 框架与技能",
+    "api": "Agent 技能",
+    "os": "跨平台",
+    "load": "轻量",
+    "tier": "入门优先",
+    "desc": "Anthropic 公开的 Agent Skills 仓库：可复用的技能定义与示例，覆盖文档、设计与开发流程。",
+    "connect": "把技能目录放进支持的 Agent 技能路径，由 Agent 按描述自动加载。",
+    "note": "技能封装的是提示与流程，不等于安全沙箱；执行权限仍由客户端控制。",
+    "task": "给 Agent 增加一套文档处理与代码审查技能。",
+    "url": "https://github.com/anthropics/skills",
+    "stars": 201208
+  },
+  {
+    "name": "Superpowers",
+    "cat": "Agent 框架与技能",
+    "api": "Agent 技能",
+    "os": "跨平台",
+    "load": "轻量",
+    "tier": "按需安装",
+    "desc": "Agent 技能框架与开发方法论：把头脑风暴、计划、实现与评审拆成可复用的技能。",
+    "connect": "以技能包形式装入 Claude Code 等客户端，按工作流自动触发。",
+    "note": "方法论偏重软件交付；团队需统一技能版本，避免流程互相冲突。",
+    "task": "让 Agent 先写计划再动手，并按清单自查。",
+    "url": "https://github.com/obra/superpowers",
+    "stars": 327767
+  },
+  {
     "name": "Playwright MCP",
     "cat": "浏览器与桌面",
     "api": "MCP",
@@ -141,6 +199,21 @@
     "note": "抓取需联网；动态网页、登录与站点限制影响成功率。",
     "task": "把公开文档整理成带来源的资料库。",
     "url": "https://github.com/unclecode/crawl4ai"
+  },
+  {
+    "name": "moli",
+    "cat": "浏览器与桌面",
+    "api": "CLI / API",
+    "os": "跨平台",
+    "load": "轻量",
+    "tier": "按需安装",
+    "desc": "为 AI Agent 设计的无头浏览器：结构优先、按需取像素，Rust 编写，体积小、启动快。",
+    "connect": "通过命令行或本地接口驱动；Agent 先读页面结构，再决定是否截图或点击。",
+    "note": "兼容性以具体站点为准；登录、验证码与反爬策略仍需人工处理。",
+    "task": "批量打开商品页，提取标题、价格与库存结构。",
+    "url": "https://github.com/lexmount/moli",
+    "stars": 24552,
+    "hot": true
   },
   {
     "name": "Pandoc",
@@ -260,6 +333,51 @@
     "url": "https://python-docx.readthedocs.io/en/latest/"
   },
   {
+    "name": "anydoc",
+    "cat": "文档与 OCR",
+    "api": "CLI / Python / API",
+    "os": "跨平台",
+    "load": "轻量",
+    "tier": "入门优先",
+    "desc": "Rust 编写的文档转换库，把 Word、PPT、Excel、EPUB、CSV 与 PDF 转成干净的 Markdown，毫秒级完成。",
+    "connect": "提供 Rust 库、Python / Node 绑定与命令行；Agent 可直接调用，把资料转成可读文本。",
+    "note": "扫描件与复杂版式仍需 OCR 或人工校对；它负责提取内容，不负责高保真排版还原。",
+    "task": "把一个项目的 Office 文档批量转换成 Markdown 知识库。",
+    "url": "https://github.com/firecrawl/anydoc",
+    "stars": 23726,
+    "hot": true
+  },
+  {
+    "name": "Filee",
+    "cat": "文档与 OCR",
+    "api": "CLI / GUI",
+    "os": "跨平台",
+    "load": "轻量",
+    "tier": "按需安装",
+    "desc": "离线文件转换器：拖拽即可在 263 种格式间转换图片、文档、音视频、电子书与压缩包，无需上传或安装 Office。",
+    "connect": "以桌面拖拽为主，另提供命令行；Agent 可调用 CLI 完成批量格式转换。",
+    "note": "特殊字体、宏与加密文档可能失败；转换后应抽查版式与编码。",
+    "task": "把一批 Word 与图片统一转成 PDF，并保持原目录结构。",
+    "url": "https://github.com/KnifeLemon/Filee",
+    "stars": 31688,
+    "hot": true
+  },
+  {
+    "name": "Unlimited-OCR",
+    "cat": "文档与 OCR",
+    "api": "Python",
+    "os": "跨平台",
+    "load": "模型相关",
+    "tier": "按需安装",
+    "desc": "面向长文档的一次性解析 OCR：整页、整册识别，减少分段拼接造成的上下文丢失。",
+    "connect": "以 Python 调用；Agent 可把扫描件与长 PDF 交给它，输出结构化文本。",
+    "note": "需要下载模型并占用显存或内存；手写体与低质量扫描仍需人工核对。",
+    "task": "把一本扫描版说明书转成可搜索、可引用的结构化文本。",
+    "url": "https://github.com/baidu/Unlimited-OCR",
+    "stars": 32862,
+    "hot": true
+  },
+  {
     "name": "openpyxl",
     "cat": "数据与记忆",
     "api": "Python",
@@ -325,19 +443,6 @@
     "url": "https://github.com/chroma-core/chroma"
   },
   {
-    "name": "VoiceStudio",
-    "cat": "语音能力",
-    "api": "MCP / API",
-    "os": "跨平台",
-    "load": "模型相关",
-    "tier": "专题优先",
-    "desc": "整合本地语音生成、转写、音色与配音工作流。",
-    "connect": "启动 TeaPoly/voicestudio，通过本地 MCP 或音频 API 接入。",
-    "note": "硬件与语种效果依引擎而变；软件与模型许可分开核对。",
-    "task": "把文稿生成配音，再与视频素材组合。",
-    "url": "https://github.com/TeaPoly/voicestudio"
-  },
-  {
     "name": "faster-whisper",
     "cat": "语音能力",
     "api": "Python",
@@ -375,6 +480,21 @@
     "note": "引擎与音色许可不同；语言、音色表现以具体模型为准。",
     "task": "让 Agent 朗读通知或生成简单旁白。",
     "url": "https://github.com/OHF-Voice/piper1-gpl"
+  },
+  {
+    "name": "VoiceStudio",
+    "cat": "语音能力",
+    "api": "CLI / API / GUI",
+    "os": "跨平台",
+    "load": "模型相关",
+    "tier": "按需安装",
+    "desc": "本地优先的开源语音工作台：声音克隆、配音、口述、转写与有声书，覆盖 646 种语言，被视为 ElevenLabs 的开源替代。",
+    "connect": "提供桌面应用、命令行与本地接口；Agent 可批量调用完成配音、转写与字幕生成。",
+    "note": "克隆他人声音需要明确授权；模型体积与推理速度取决于显卡与后端（CUDA / MLX / CPU）。",
+    "task": "把一段旁白脚本生成多个声音版本，并同时导出音频与字幕。",
+    "url": "https://github.com/debpalash/VoiceStudio",
+    "stars": 119064,
+    "hot": true
   },
   {
     "name": "FFmpeg + ffprobe",
@@ -429,6 +549,51 @@
     "url": "https://docs.opencv.org/4.x/"
   },
   {
+    "name": "OpenMontage",
+    "cat": "音视频与图像",
+    "api": "CLI / Agent 技能",
+    "os": "跨平台",
+    "load": "模型相关",
+    "tier": "按需安装",
+    "desc": "面向 Agent 的开源视频生产系统：12 条制作流水线、100+ 工具与 700+ 技能文件，把编码 Agent 变成视频工作室。",
+    "connect": "作为 Agent 的技能包与工具集使用，由 Agent 调度剪辑、配音、生图与合成工具完成成片。",
+    "note": "成片质量取决于所接模型与素材授权；渲染、生图和配音会产生算力或 API 费用。",
+    "task": "把一段产品介绍稿做成带分镜、配音和字幕的短视频。",
+    "url": "https://github.com/OpenMontageInc/OpenMontage",
+    "stars": 83731,
+    "hot": true
+  },
+  {
+    "name": "PhotoCraft",
+    "cat": "音视频与图像",
+    "api": "GUI",
+    "os": "跨平台",
+    "load": "轻量",
+    "tier": "按需安装",
+    "desc": "纯 Rust 从零编写的开源照片编辑器，启动快、占用低，适合本地修图与调色。",
+    "connect": "以桌面图形界面为主；批量环节可配合 Agent 生成的脚本与其他命令行工具。",
+    "note": "偏手工修图，不是自动化批处理引擎；复杂合成能力不及专业套件。",
+    "task": "统一调整一组照片的曝光与色调，再导出网页尺寸。",
+    "url": "https://github.com/storytold/photocraft",
+    "stars": 81769,
+    "hot": true
+  },
+  {
+    "name": "Concat",
+    "cat": "音视频与图像",
+    "api": "MCP / GUI",
+    "os": "跨平台",
+    "load": "中等",
+    "tier": "按需安装",
+    "desc": "开源的 CapCut 替代品：离线优先的非线性视频剪辑器，基于 FFmpeg，并提供 MCP 接口。",
+    "connect": "以桌面剪辑界面为主；通过 MCP 让 Agent 读取工程、套用剪辑模板并批量导出。",
+    "note": "大型工程占用内存与磁盘；MCP 能力随版本演进，复杂特效仍需人工调整。",
+    "task": "把一批录屏按模板剪成统一片头、字幕和转场的成片。",
+    "url": "https://github.com/jub0t/Concat",
+    "stars": 21947,
+    "hot": true
+  },
+  {
     "name": "ComfyUI",
     "cat": "本地模型与生成",
     "api": "API",
@@ -466,6 +631,36 @@
     "note": "需自己选择量化、上下文与硬件后端；模型能力不等同云端旗舰。",
     "task": "为离线资料助手提供可控的推理后端。",
     "url": "https://github.com/ggml-org/llama.cpp"
+  },
+  {
+    "name": "colibri",
+    "cat": "本地模型与生成",
+    "api": "CLI / API",
+    "os": "跨平台",
+    "load": "模型相关",
+    "tier": "按需安装",
+    "desc": "面向超大 MoE 模型的分层推理引擎：热专家放显存、温专家放内存、冷专家流式读取 NVMe。",
+    "connect": "命令行启动本地服务，暴露兼容接口供 Agent 调用。",
+    "note": "速度受内存带宽与硬盘影响；模型需合法获取，低配机器更适合离线批处理。",
+    "task": "在没有大显存的电脑上运行超大 MoE 模型做离线摘要。",
+    "url": "https://github.com/JustVugg/colibri",
+    "stars": 53631,
+    "hot": true
+  },
+  {
+    "name": "Strata",
+    "cat": "本地模型与生成",
+    "api": "API / GUI",
+    "os": "Windows / Linux",
+    "load": "模型相关",
+    "tier": "按需安装",
+    "desc": "一键在 Windows / Linux 上运行 Qwen3.8-Flash-Next，并在本机暴露 OpenAI / Anthropic 兼容接口。",
+    "connect": "安装包启动本地推理服务，Agent 把接口地址当作本地模型端点使用。",
+    "note": "对内存与显存有实际门槛；量化版本与上下文长度会影响质量与速度。",
+    "task": "用本地模型处理不适合上传的合同与笔记。",
+    "url": "https://github.com/Niko1221/Strata",
+    "stars": 48531,
+    "hot": true
   },
   {
     "name": "REA",
@@ -531,6 +726,21 @@
     "note": "抓包需要相应驱动/权限；加密流量不会自动变为明文。",
     "task": "分析测试环境的 DNS 延迟与请求失败。",
     "url": "https://www.wireshark.org/docs/man-pages/tshark.html"
+  },
+  {
+    "name": "Craft Anything",
+    "cat": "逆向与诊断",
+    "api": "Agent 技能",
+    "os": "跨平台",
+    "load": "中等",
+    "tier": "按需安装",
+    "desc": "用 Agent 理解软件如何运作，并在弄清结构之后复刻或改造它。",
+    "connect": "以技能与工作流形式配合逆向工具使用，由 Agent 组织观察、验证与重建。",
+    "note": "仅用于合法授权的研究；复刻他人软件涉及许可与知识产权。",
+    "task": "分析一个小工具的功能结构，并写出等价实现。",
+    "url": "https://github.com/storytold/craft-anything",
+    "stars": 44317,
+    "hot": true
   },
   {
     "name": "Blender",
@@ -687,5 +897,20 @@
     "note": "需自行处理鉴权、任务超时与文件路径边界。",
     "task": "给图片批处理脚本提供标准请求入口。",
     "url": "https://github.com/fastapi/fastapi"
+  },
+  {
+    "name": "Magpie",
+    "cat": "接口与编排",
+    "api": "API / CLI",
+    "os": "跨平台",
+    "load": "轻量",
+    "tier": "按需安装",
+    "desc": "把已付费的多个模型订阅池化，在一个本地端点里按可用性自动切换。",
+    "connect": "本地启动网关，Agent 把接口地址指向它，即可复用现有订阅。",
+    "note": "可能违反部分服务商条款；密钥与账号安全需自行负责。",
+    "task": "让本地 Agent 在主模型额度用尽时自动切换备用模型。",
+    "url": "https://github.com/yetone/magpie",
+    "stars": 42269,
+    "hot": true
   }
 ]
