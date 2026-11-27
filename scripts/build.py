@@ -10,6 +10,8 @@ OUTPUT_PATH = ROOT / "index.html"
 
 REQUIRED = ("name", "cat", "api", "os", "load", "tier", "desc", "connect", "note", "task", "url")
 OPTIONAL = {"stars": int, "hot": bool}
+TIERS = {"入门优先", "按需安装"}
+LOADS = {"轻量", "中等", "模型相关"}
 
 
 def load_catalog():
@@ -23,6 +25,8 @@ def validate(data):
         raise ValueError("The catalog must not be empty")
     if len({item.get("name") for item in data}) != len(data):
         raise ValueError("Tool names must be unique")
+    if len({item.get("url") for item in data}) != len(data):
+        raise ValueError("Source URLs must be unique")
     for item in data:
         name = item.get("name", "?")
         for field in REQUIRED:
@@ -36,6 +40,10 @@ def validate(data):
                 raise ValueError(f"{name}: {field} must be {kind.__name__}")
         if item.get("stars", 0) < 0:
             raise ValueError(f"{name}: stars must not be negative")
+        if item["tier"] not in TIERS:
+            raise ValueError(f"{name}: tier must be one of {sorted(TIERS)}")
+        if item["load"] not in LOADS:
+            raise ValueError(f"{name}: load must be one of {sorted(LOADS)}")
         if item.get("hot") and not item.get("stars"):
             raise ValueError(f"{name}: hot entries need a star count")
         if not item["url"].startswith("https://"):

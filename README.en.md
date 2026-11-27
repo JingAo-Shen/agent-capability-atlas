@@ -4,9 +4,11 @@
 
 A curated list of practical tools for personal computers and agents: what each tool does, where it fits, its limits, and the official source. **A catalog, not an installation guide.**
 
-**68 tools and runtimes · 13 capability areas · 14 recent trending projects**
+**69 tools and runtimes · 13 capability areas · 14 recent trending projects**
 
 **Live site**: <https://jingao-shen.github.io/agent-capability-atlas/>
+
+**Categories**: [Runtime foundations](#runtime-foundations) · [Agent frameworks & skills](#agent-frameworks--skills) · [Browser & desktop](#browser--desktop) · [Documents & OCR](#documents--ocr) · [Data & memory](#data--memory) · [Voice & speech](#voice--speech) · [Audio, video & images](#audio-video--images) · [Local models & generation](#local-models--generation) · [Reverse engineering](#reverse-engineering) · [3D & engineering](#3d--engineering) · [Scientific computing](#scientific-computing) · [Files & backup](#files--backup) · [Interfaces & orchestration](#interfaces--orchestration)
 
 ## Browse
 
@@ -47,7 +49,7 @@ Every tool name in the tables below links to its official project or documentati
 | [Playwright MCP](https://github.com/microsoft/playwright-mcp) | MCP | Win / macOS / Linux | Medium | Browser control for agents via accessibility trees. |
 | [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) | MCP | Win / macOS / Linux | Medium | Chrome debugging, network and performance access. |
 | [pywinauto](https://github.com/pywinauto/pywinauto) | Python | Windows | Light | Windows GUI automation through control handles. |
-| [AutoHotkey](https://github.com/AutoHotkey/AutoHotkey) | 脚本 | Windows | Light | Windows hotkeys and desktop macros. |
+| [AutoHotkey](https://github.com/AutoHotkey/AutoHotkey) | CLI / GUI | Windows | Light | Windows hotkeys and desktop macros. |
 | [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/) | Python | Win / macOS / Linux | Light | Cross-platform mouse, keyboard and screen control. |
 | [Crawl4AI](https://github.com/unclecode/crawl4ai) | Python / API | Win / macOS / Linux | Medium | Batch web crawling into LLM-ready Markdown. |
 | [moli](https://github.com/lexmount/moli) | CLI / API | Win / macOS / Linux | Light | Headless browser for agents: structure first, pixels on demand. |
@@ -63,11 +65,12 @@ Every tool name in the tables below links to its official project or documentati
 | [Tesseract](https://github.com/tesseract-ocr/tesseract) | CLI | Win / macOS / Linux | Light | Classic open-source OCR engine. |
 | [OCRmyPDF](https://ocrmypdf.readthedocs.io/en/latest/) | CLI / Python | Win / macOS / Linux | Medium | Add a searchable text layer to scanned PDFs. |
 | [PyMuPDF](https://pymupdf.readthedocs.io/en/latest/) | Python | Win / macOS / Linux | Light | Fast PDF parsing, rendering and editing. |
-| [LibreOffice](https://help.libreoffice.org/latest/en-US/text/shared/guide/start_parameters.html) | CLI / UNO | Win / macOS / Linux | Medium | Headless Office format conversion. |
+| [LibreOffice](https://help.libreoffice.org/latest/en-US/text/shared/guide/start_parameters.html) | CLI / API | Win / macOS / Linux | Medium | Headless Office format conversion. |
 | [python-docx](https://python-docx.readthedocs.io/en/latest/) | Python | Win / macOS / Linux | Light | Read and write Word documents precisely. |
 | [anydoc](https://github.com/firecrawl/anydoc) | CLI / Python / API | Win / macOS / Linux | Light | Fast Rust document-to-Markdown conversion. |
 | [Filee](https://github.com/KnifeLemon/Filee) | CLI / GUI | Win / macOS / Linux | Light | Offline file converter covering 263 formats. |
 | [Unlimited-OCR](https://github.com/baidu/Unlimited-OCR) | Python | Win / macOS / Linux | Model-dependent | One-shot OCR for long documents. |
+| [MinerU](https://github.com/opendatalab/MinerU) | CLI / Python / API | Win / macOS / Linux | Model-dependent | Turns complex PDF and Office documents into LLM-ready Markdown or JSON, with strong formula, table and multi-column support. |
 
 ### Data & memory
 
@@ -115,8 +118,8 @@ Every tool name in the tables below links to its official project or documentati
 | Tool | Interface | Platform | Footprint | What it does |
 | --- | --- | --- | --- | --- |
 | [REA](https://github.com/morluto/rea) | MCP / CLI | Win / macOS / Linux | Medium | Agent-driven reverse engineering from behavior to binaries. |
-| [Ghidra](https://github.com/NationalSecurityAgency/ghidra) | CLI / 脚本 | Win / macOS / Linux | Medium | Software reverse engineering suite. |
-| [radare2](https://rada.re/n/) | CLI / r2pipe | Win / macOS / Linux | Medium | Command-line binary analysis framework. |
+| [Ghidra](https://github.com/NationalSecurityAgency/ghidra) | CLI / Python | Win / macOS / Linux | Medium | Software reverse engineering suite. |
+| [radare2](https://rada.re/n/) | CLI / Python | Win / macOS / Linux | Medium | Command-line binary analysis framework. |
 | [Frida](https://frida.re/) | CLI / Python / JS | Win / macOS / Linux | Medium | Dynamic instrumentation and runtime hooking. |
 | [TShark](https://www.wireshark.org/docs/man-pages/tshark.html) | CLI | Win / macOS / Linux | Medium | Command-line packet capture and analysis. |
 | [Craft Anything](https://github.com/storytold/craft-anything) | Agent skill | Win / macOS / Linux | Medium | Agent workflow for understanding and rebuilding software. |
@@ -149,7 +152,7 @@ Every tool name in the tables below links to its official project or documentati
 
 | Tool | Interface | Platform | Footprint | What it does |
 | --- | --- | --- | --- | --- |
-| [n8n](https://docs.n8n.io/hosting/) | API / Webhook | Win / macOS / Linux | Medium | Visual workflow automation with AI nodes. |
+| [n8n](https://docs.n8n.io/hosting/) | API | Win / macOS / Linux | Medium | Visual workflow automation with AI nodes. |
 | [FastMCP](https://gofastmcp.com/getting-started/welcome) | MCP / Python | Win / macOS / Linux | Light | Build MCP servers in Python. |
 | [FastAPI](https://github.com/fastapi/fastapi) | API / Python | Win / macOS / Linux | Light | Typed HTTP APIs with automatic docs. |
 | [Magpie](https://github.com/yetone/magpie) | API / CLI | Win / macOS / Linux | Light | Pool and fail over model subscriptions behind one endpoint. |

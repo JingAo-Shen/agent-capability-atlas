@@ -4,9 +4,11 @@
 
 一份面向个人电脑与 Agent 的实用工具清单，记录好用的工具、适用场景、使用边界与官方来源。**只做收录，不提供安装教程。**
 
-**68 项工具与运行环境 · 13 个能力领域 · 14 项近期热门**
+**69 项工具与运行环境 · 13 个能力领域 · 14 项近期热门**
 
 **在线浏览**：<https://jingao-shen.github.io/agent-capability-atlas/>
+
+**分类**：[运行底座](#运行底座) · [Agent 框架与技能](#agent-框架与技能) · [浏览器与桌面](#浏览器与桌面) · [文档与 OCR](#文档与-ocr) · [数据与记忆](#数据与记忆) · [语音能力](#语音能力) · [音视频与图像](#音视频与图像) · [本地模型与生成](#本地模型与生成) · [逆向与诊断](#逆向与诊断) · [3D 与工程](#3d-与工程) · [科学计算](#科学计算) · [文件与备份](#文件与备份) · [接口与编排](#接口与编排)
 
 ## 如何浏览
 
@@ -14,7 +16,7 @@
 
 - **近期热门**：近几个月 GitHub 关注度最高的新项目，按收藏数排序。
 - **按场景找工具**：办公研究、语音视频、开发逆向、创作工程四组工作流。
-- **筛选**：分类、系统、接口、资源门槛，以及「入门友好」「仅看收藏」。
+- **筛选**：分类、系统、接口、资源门槛，以及「入门优先」「仅看收藏」。
 - **收藏与导出**：收藏保存在浏览器本地，可导出 Markdown 清单。
 
 ## 工具清单
@@ -47,7 +49,7 @@
 | [Playwright MCP](https://github.com/microsoft/playwright-mcp) | MCP | Win / macOS / Linux | 中等 | 让 Agent 浏览网页、点击表单、读取结构并完成浏览器验证。 |
 | [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) | MCP | Win / macOS / Linux | 中等 | 向 Agent 暴露 Chrome 调试、网络请求和性能诊断能力。 |
 | [pywinauto](https://github.com/pywinauto/pywinauto) | Python | Windows | 轻量 | 按控件与窗口属性操作 Windows 桌面软件。 |
-| [AutoHotkey](https://github.com/AutoHotkey/AutoHotkey) | 脚本 | Windows | 轻量 | 把快捷键、窗口操作和重复输入变成可调用脚本。 |
+| [AutoHotkey](https://github.com/AutoHotkey/AutoHotkey) | CLI / GUI | Windows | 轻量 | 把快捷键、窗口操作和重复输入变成可调用脚本。 |
 | [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/) | Python | Win / macOS / Linux | 轻量 | 为缺少接口的软件补充鼠标、键盘与截图自动化。 |
 | [Crawl4AI](https://github.com/unclecode/crawl4ai) | Python / API | Win / macOS / Linux | 中等 | 把网页抓取为便于模型阅读的 Markdown 与结构化结果。 |
 | [moli](https://github.com/lexmount/moli) | CLI / API | Win / macOS / Linux | 轻量 | 为 AI Agent 设计的无头浏览器：结构优先、按需取像素，Rust 编写，体积小、启动快。 |
@@ -63,11 +65,12 @@
 | [Tesseract](https://github.com/tesseract-ocr/tesseract) | CLI | Win / macOS / Linux | 轻量 | 提供传统 OCR，适合清晰扫描文字的批量识别。 |
 | [OCRmyPDF](https://ocrmypdf.readthedocs.io/en/latest/) | CLI / Python | Win / macOS / Linux | 中等 | 给扫描 PDF 添加可搜索的文字层。 |
 | [PyMuPDF](https://pymupdf.readthedocs.io/en/latest/) | Python | Win / macOS / Linux | 轻量 | 读取、渲染、拆分 PDF，提取文本和图片。 |
-| [LibreOffice](https://help.libreoffice.org/latest/en-US/text/shared/guide/start_parameters.html) | CLI / UNO | Win / macOS / Linux | 中等 | 提供 Office 文档的本地打开、转换与排版引擎。 |
+| [LibreOffice](https://help.libreoffice.org/latest/en-US/text/shared/guide/start_parameters.html) | CLI / API | Win / macOS / Linux | 中等 | 提供 Office 文档的本地打开、转换与排版引擎。 |
 | [python-docx](https://python-docx.readthedocs.io/en/latest/) | Python | Win / macOS / Linux | 轻量 | 直接创建与修改 Word 文档的段落、表格和样式。 |
 | [anydoc](https://github.com/firecrawl/anydoc) | CLI / Python / API | Win / macOS / Linux | 轻量 | Rust 编写的文档转换库，把 Word、PPT、Excel、EPUB、CSV 与 PDF 转成干净的 Markdown，毫秒级完成。 |
 | [Filee](https://github.com/KnifeLemon/Filee) | CLI / GUI | Win / macOS / Linux | 轻量 | 离线文件转换器：拖拽即可在 263 种格式间转换图片、文档、音视频、电子书与压缩包，无需上传或安装 Office。 |
 | [Unlimited-OCR](https://github.com/baidu/Unlimited-OCR) | Python | Win / macOS / Linux | 模型相关 | 面向长文档的一次性解析 OCR：整页、整册识别，减少分段拼接造成的上下文丢失。 |
+| [MinerU](https://github.com/opendatalab/MinerU) | CLI / Python / API | Win / macOS / Linux | 模型相关 | 把复杂 PDF 与 Office 文档转成适合 LLM 的 Markdown / JSON，擅长公式、表格与多栏版面。 |
 
 ### 数据与记忆
 
@@ -115,8 +118,8 @@
 | 工具 | 接口 | 平台 | 资源 | 一句话说明 |
 | --- | --- | --- | --- | --- |
 | [REA](https://github.com/morluto/rea) | MCP / CLI | Win / macOS / Linux | 中等 | 把二进制、应用与运行行为分析工具接给 Agent。 |
-| [Ghidra](https://github.com/NationalSecurityAgency/ghidra) | CLI / 脚本 | Win / macOS / Linux | 中等 | 提供反汇编、反编译和程序分析底座。 |
-| [radare2](https://rada.re/n/) | CLI / r2pipe | Win / macOS / Linux | 中等 | 用命令行检查二进制结构、符号与反汇编。 |
+| [Ghidra](https://github.com/NationalSecurityAgency/ghidra) | CLI / Python | Win / macOS / Linux | 中等 | 提供反汇编、反编译和程序分析底座。 |
+| [radare2](https://rada.re/n/) | CLI / Python | Win / macOS / Linux | 中等 | 用命令行检查二进制结构、符号与反汇编。 |
 | [Frida](https://frida.re/) | CLI / Python / JS | Win / macOS / Linux | 中等 | 观察运行中的程序，动态插桩与跟踪函数行为。 |
 | [TShark](https://www.wireshark.org/docs/man-pages/tshark.html) | CLI | Win / macOS / Linux | 中等 | 把抓包与协议解析变成可脚本化的诊断过程。 |
 | [Craft Anything](https://github.com/storytold/craft-anything) | Agent 技能 | Win / macOS / Linux | 中等 | 用 Agent 理解软件如何运作，并在弄清结构之后复刻或改造它。 |
@@ -149,7 +152,7 @@
 
 | 工具 | 接口 | 平台 | 资源 | 一句话说明 |
 | --- | --- | --- | --- | --- |
-| [n8n](https://docs.n8n.io/hosting/) | API / Webhook | Win / macOS / Linux | 中等 | 把触发器、工具与数据处理连接成持续运行的流程。 |
+| [n8n](https://docs.n8n.io/hosting/) | API | Win / macOS / Linux | 中等 | 把触发器、工具与数据处理连接成持续运行的流程。 |
 | [FastMCP](https://gofastmcp.com/getting-started/welcome) | MCP / Python | Win / macOS / Linux | 轻量 | 把已有 Python 函数和服务封装成 Agent 可调用的 MCP 工具。 |
 | [FastAPI](https://github.com/fastapi/fastapi) | API / Python | Win / macOS / Linux | 轻量 | 把本地脚本封装为有参数校验的 HTTP API。 |
 | [Magpie](https://github.com/yetone/magpie) | API / CLI | Win / macOS / Linux | 轻量 | 把已付费的多个模型订阅池化，在一个本地端点里按可用性自动切换。 |
