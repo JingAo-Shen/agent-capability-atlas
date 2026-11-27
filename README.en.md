@@ -8,6 +8,8 @@ A curated list of practical tools for personal computers and agents: what each t
 
 **Live site**: <https://jingao-shen.github.io/agent-capability-atlas/>
 
+[![Link check](https://github.com/JingAo-Shen/agent-capability-atlas/actions/workflows/link-check.yml/badge.svg)](https://github.com/JingAo-Shen/agent-capability-atlas/actions/workflows/link-check.yml)
+
 **Categories**: [Runtime foundations](#runtime-foundations) · [Agent frameworks & skills](#agent-frameworks--skills) · [Browser & desktop](#browser--desktop) · [Documents & OCR](#documents--ocr) · [Data & memory](#data--memory) · [Voice & speech](#voice--speech) · [Audio, video & images](#audio-video--images) · [Local models & generation](#local-models--generation) · [Reverse engineering](#reverse-engineering) · [3D & engineering](#3d--engineering) · [Scientific computing](#scientific-computing) · [Files & backup](#files--backup) · [Interfaces & orchestration](#interfaces--orchestration)
 
 ## Browse
@@ -172,12 +174,17 @@ Every tool name in the tables below links to its official project or documentati
 | `data/tools.json` | Tool entries, official links, star counts and trending flags |
 | `src/template.html` | Page layout, styles and interactions |
 | `scripts/build.py` | Validate the catalog and render the standalone page |
+| `scripts/check_links.py` | Check every source link; runs weekly in GitHub Actions |
+| `scripts/make_og.py` | Generate the 1200×630 social share image (needs Pillow) |
+| `assets/og.png` | Social share image |
 | `index.html` | Build artifact and distribution entry point |
 
 ```sh
 python scripts/build.py
 python scripts/build.py --check
 ```
+
+A GitHub Actions job checks every source link on Mondays. It fails and opens an issue on 404/410/5xx or connection errors; 403/429 count as bot-protection or rate-limit warnings.
 
 Required fields: `name`, `cat`, `api`, `os`, `load`, `tier`, `desc`, `connect`, `note`, `task`, `url`. Optional: `stars` (GitHub star count) and `hot` (show in the trending section). Rebuild and commit `index.html` after changing data or templates.
 

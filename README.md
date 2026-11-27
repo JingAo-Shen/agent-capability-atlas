@@ -8,6 +8,8 @@
 
 **在线浏览**：<https://jingao-shen.github.io/agent-capability-atlas/>
 
+[![Link check](https://github.com/JingAo-Shen/agent-capability-atlas/actions/workflows/link-check.yml/badge.svg)](https://github.com/JingAo-Shen/agent-capability-atlas/actions/workflows/link-check.yml)
+
 **分类**：[运行底座](#运行底座) · [Agent 框架与技能](#agent-框架与技能) · [浏览器与桌面](#浏览器与桌面) · [文档与 OCR](#文档与-ocr) · [数据与记忆](#数据与记忆) · [语音能力](#语音能力) · [音视频与图像](#音视频与图像) · [本地模型与生成](#本地模型与生成) · [逆向与诊断](#逆向与诊断) · [3D 与工程](#3d-与工程) · [科学计算](#科学计算) · [文件与备份](#文件与备份) · [接口与编排](#接口与编排)
 
 ## 如何浏览
@@ -172,12 +174,17 @@
 | `data/tools.json` | 工具条目、官方链接、收藏数与热门标记 |
 | `src/template.html` | 页面布局、样式与交互 |
 | `scripts/build.py` | 校验数据并生成独立页面 |
+| `scripts/check_links.py` | 检查全部官方链接；GitHub Actions 每周一自动运行 |
+| `scripts/make_og.py` | 生成 1200×630 社交分享图（需 Pillow） |
+| `assets/og.png` | 社交分享图 |
 | `index.html` | 构建产物，也是分发入口 |
 
 ```sh
 python scripts/build.py
 python scripts/build.py --check
 ```
+
+外链由 GitHub Actions 每周一检查一次。404 / 410 / 5xx 或连接失败会让工作流失败并自动开 Issue；403 / 429 视为站点反爬或限流，只记录警告。
 
 必填字段：`name`、`cat`、`api`、`os`、`load`、`tier`、`desc`、`connect`、`note`、`task`、`url`；可选 `stars`（GitHub 收藏数）与 `hot`（是否列入近期热门）。修改数据或模板后重新构建，并一并提交 `index.html`。
 
