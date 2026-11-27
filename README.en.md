@@ -6,9 +6,11 @@ A curated list of practical tools for personal computers and agents: what each t
 
 **68 tools and runtimes · 13 capability areas · 14 recent trending projects**
 
+**Live site**: <https://jingao-shen.github.io/agent-capability-atlas/>
+
 ## Browse
 
-Open `index.html` in a modern browser. The page has no CDN or external script dependencies, so search and filters work offline.
+Visit the live site above, or open `index.html` in a modern browser. The page has no CDN or external script dependencies, so search and filters work offline.
 
 - **Trending**: recent GitHub projects with the most stars.
 - **By task**: office and research, voice and video, reverse engineering, creative work.
