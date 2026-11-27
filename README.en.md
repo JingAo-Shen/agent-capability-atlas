@@ -4,7 +4,7 @@
 
 A curated list of practical tools for personal computers and agents: what each tool does, where it fits, its limits, and the official source. **A catalog, not an installation guide.**
 
-**76 tools and runtimes · 14 capability areas · 17 recent trending projects**
+**87 tools and runtimes · 14 capability areas · 21 recent trending projects**
 
 **Live site**: <https://jingao-shen.github.io/agent-capability-atlas/>
 
@@ -34,6 +34,7 @@ Every tool name in the tables below links to its official project or documentati
 | [Git](https://git-scm.com/) | CLI | Win / macOS / Linux | Light | Version control for traceable, reversible changes. |
 | [Docker Desktop](https://docs.docker.com/desktop/) | CLI / API | Win / macOS / Linux | Medium | Isolated databases and services with Compose. |
 | [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/about) | CLI | Windows | Medium | Linux toolchain on Windows. |
+| [cc-switch](https://github.com/farion1231/cc-switch) | GUI | Win / macOS / Linux | Light | Manage API providers, MCP servers, skills and prompts for Claude Code, Codex, OpenCode and more in one desktop app. |
 
 ### Agent frameworks & skills
 
@@ -43,6 +44,9 @@ Every tool name in the tables below links to its official project or documentati
 | [OpenClaw](https://github.com/openclaw/openclaw) | CLI / API | Win / macOS / Linux | Medium | Personal AI assistant that executes tasks across systems. |
 | [Anthropic Skills](https://github.com/anthropics/skills) | Agent skill | Win / macOS / Linux | Light | Official reusable agent skill definitions. |
 | [Superpowers](https://github.com/obra/superpowers) | Agent skill | Win / macOS / Linux | Light | Agent skills framework for software delivery. |
+| [OpenCode](https://github.com/anomalyco/opencode) | CLI / TUI | Win / macOS / Linux | Medium | Open-source coding agent with a terminal UI, multi-model support and project-aware tool use. |
+| [odysseus](https://github.com/odysseus-dev/odysseus) | Web / Docker | Win / macOS / Linux | Medium | Self-hosted AI workspace for chat, agents, research, documents, email, notes and local models. |
+| [security-audit-skill](https://github.com/cloudflare/security-audit-skill) | Agent skill | Win / macOS / Linux | Light | Cloudflare's coding-agent skill for phased, verifiable security audits. |
 
 ### Browser & desktop
 
@@ -55,6 +59,8 @@ Every tool name in the tables below links to its official project or documentati
 | [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/) | Python | Win / macOS / Linux | Light | Cross-platform mouse, keyboard and screen control. |
 | [Crawl4AI](https://github.com/unclecode/crawl4ai) | Python / API | Win / macOS / Linux | Medium | Batch web crawling into LLM-ready Markdown. |
 | [moli](https://github.com/lexmount/moli) | CLI / API | Win / macOS / Linux | Light | Headless browser for agents: structure first, pixels on demand. |
+| [browser-use](https://github.com/browser-use/browser-use) | Python / CLI | Win / macOS / Linux | Medium | Open-source browser agent library driving real Chrome through Python and CDP. |
+| [Agent-Reach](https://github.com/Panniantong/Agent-Reach) | CLI / MCP | Win / macOS / Linux | Light | One CLI that lets agents search and read X, Reddit, YouTube, Xiaohongshu and more. |
 
 ### Documents & OCR
 
@@ -73,6 +79,7 @@ Every tool name in the tables below links to its official project or documentati
 | [Filee](https://github.com/KnifeLemon/Filee) | CLI / GUI | Win / macOS / Linux | Light | Offline file converter covering 263 formats. |
 | [Unlimited-OCR](https://github.com/baidu/Unlimited-OCR) | Python | Win / macOS / Linux | Model-dependent | One-shot OCR for long documents. |
 | [MinerU](https://github.com/opendatalab/MinerU) | CLI / Python / API | Win / macOS / Linux | Model-dependent | Turns complex PDF and Office documents into LLM-ready Markdown or JSON, with strong formula, table and multi-column support. |
+| [GenOffice](https://github.com/genspark-ai/genoffice) | GUI / CLI / MCP | Win / macOS / Linux | Medium | Open-source AI office suite editing native docx, xlsx, pptx, PDF and Markdown, with CLI and MCP. |
 
 ### Data & memory
 
@@ -83,6 +90,8 @@ Every tool name in the tables below links to its official project or documentati
 | [SQLite](https://www.sqlite.org/cli.html) | SQL / CLI / Python | Win / macOS / Linux | Light | Embedded relational database. |
 | [Qdrant](https://qdrant.tech/documentation/quickstart/) | API / Python | Win / macOS / Linux | Medium | Vector search for local knowledge bases. |
 | [Chroma](https://github.com/chroma-core/chroma) | Python / API | Win / macOS / Linux | Medium | Lightweight embedding store for RAG. |
+| [Graphify](https://github.com/Graphify-Labs/graphify) | CLI / Agent skill | Win / macOS / Linux | Medium | Turn a codebase, docs, SQL schemas and PDFs into a queryable knowledge graph for agents. |
+| [xerj](https://github.com/xerj-org/xerj) | CLI / MCP | Win / macOS / Linux | Light | Single-binary local search engine and MCP server with BM25 indexing for code, docs, logs and PDFs. |
 
 ### Voice & speech
 
@@ -104,6 +113,8 @@ Every tool name in the tables below links to its official project or documentati
 | [OpenMontage](https://github.com/OpenMontageInc/OpenMontage) | CLI / Agent skill | Win / macOS / Linux | Model-dependent | Agentic video production pipelines and tools. |
 | [PhotoCraft](https://github.com/storytold/photocraft) | GUI | Win / macOS / Linux | Light | Fast Rust photo editor for local editing. |
 | [Concat](https://github.com/jub0t/Concat) | MCP / GUI | Win / macOS / Linux | Medium | Open-source CapCut alternative with MCP. |
+| [Remotion](https://github.com/remotion-dev/remotion) | React / CLI / API | Win / macOS / Linux | Medium | Make videos programmatically with React components, timelines and a deterministic renderer. |
+| [HyperFrames](https://github.com/heygen-com/hyperframes) | CLI / Agent skill | Win / macOS / Linux | Medium | HeyGen's open-source AI video editor and framework: HTML/CSS/JS in, deterministic MP4 out. |
 
 ### Local models & generation
 

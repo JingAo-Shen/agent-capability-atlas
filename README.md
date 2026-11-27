@@ -4,7 +4,7 @@
 
 一份面向个人电脑与 Agent 的实用工具清单，记录好用的工具、适用场景、使用边界与官方来源。**只做收录，不提供安装教程。**
 
-**76 项工具与运行环境 · 14 个能力领域 · 17 项近期热门**
+**87 项工具与运行环境 · 14 个能力领域 · 21 项近期热门**
 
 **在线浏览**：<https://jingao-shen.github.io/agent-capability-atlas/>
 
@@ -34,6 +34,7 @@
 | [Git](https://git-scm.com/) | CLI | Win / macOS / Linux | 轻量 | 让 Agent 的代码与文本修改可追踪、可比较、可回退。 |
 | [Docker Desktop](https://docs.docker.com/desktop/) | CLI / API | Win / macOS / Linux | 中等 | 在电脑上启动隔离的数据库、服务与可复现运行环境。 |
 | [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/about) | CLI | Windows | 中等 | 让 Windows 使用 Linux 工具链与部分仅面向 Linux 的依赖。 |
+| [cc-switch](https://github.com/farion1231/cc-switch) | GUI | Win / macOS / Linux | 轻量 | 在一个桌面应用里管理 Claude Code、Codex、OpenCode 等 Agent 的 API 供应商、MCP、技能与提示词。 |
 
 ### Agent 框架与技能
 
@@ -43,6 +44,9 @@
 | [OpenClaw](https://github.com/openclaw/openclaw) | CLI / API | Win / macOS / Linux | 中等 | 强调真正执行任务的个人 AI 助手，跨系统运行，数据留在自己的设备与账号里。 |
 | [Anthropic Skills](https://github.com/anthropics/skills) | Agent 技能 | Win / macOS / Linux | 轻量 | Anthropic 公开的 Agent Skills 仓库：可复用的技能定义与示例，覆盖文档、设计与开发流程。 |
 | [Superpowers](https://github.com/obra/superpowers) | Agent 技能 | Win / macOS / Linux | 轻量 | Agent 技能框架与开发方法论：把头脑风暴、计划、实现与评审拆成可复用的技能。 |
+| [OpenCode](https://github.com/anomalyco/opencode) | CLI / TUI | Win / macOS / Linux | 中等 | 开源编码 Agent，提供终端界面与多模型接入，可读写项目、运行命令并管理会话。 |
+| [odysseus](https://github.com/odysseus-dev/odysseus) | Web / Docker | Win / macOS / Linux | 中等 | 自托管的 AI 工作台：把对话、Agent、研究、文档、邮件、笔记、日历与本地模型放在一个界面里。 |
+| [security-audit-skill](https://github.com/cloudflare/security-audit-skill) | Agent 技能 | Win / macOS / Linux | 轻量 | Cloudflare 开源的安全审计技能：让编码 Agent 按侦察、覆盖、验证、复核等阶段做漏洞审计。 |
 
 ### 浏览器与桌面
 
@@ -55,6 +59,8 @@
 | [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/) | Python | Win / macOS / Linux | 轻量 | 为缺少接口的软件补充鼠标、键盘与截图自动化。 |
 | [Crawl4AI](https://github.com/unclecode/crawl4ai) | Python / API | Win / macOS / Linux | 中等 | 把网页抓取为便于模型阅读的 Markdown 与结构化结果。 |
 | [moli](https://github.com/lexmount/moli) | CLI / API | Win / macOS / Linux | 轻量 | 为 AI Agent 设计的无头浏览器：结构优先、按需取像素，Rust 编写，体积小、启动快。 |
+| [browser-use](https://github.com/browser-use/browser-use) | Python / CLI | Win / macOS / Linux | 中等 | 开源浏览器 Agent 库：模型通过 Python REPL 与 Chrome DevTools 协议在真实浏览器里完成任务。 |
+| [Agent-Reach](https://github.com/Panniantong/Agent-Reach) | CLI / MCP | Win / macOS / Linux | 轻量 | 给 Agent 补上读取互联网的能力：通过一个 CLI 搜索和阅读 X、Reddit、YouTube、小红书等平台。 |
 
 ### 文档与 OCR
 
@@ -73,6 +79,7 @@
 | [Filee](https://github.com/KnifeLemon/Filee) | CLI / GUI | Win / macOS / Linux | 轻量 | 离线文件转换器：拖拽即可在 263 种格式间转换图片、文档、音视频、电子书与压缩包，无需上传或安装 Office。 |
 | [Unlimited-OCR](https://github.com/baidu/Unlimited-OCR) | Python | Win / macOS / Linux | 模型相关 | 面向长文档的一次性解析 OCR：整页、整册识别，减少分段拼接造成的上下文丢失。 |
 | [MinerU](https://github.com/opendatalab/MinerU) | CLI / Python / API | Win / macOS / Linux | 模型相关 | 把复杂 PDF 与 Office 文档转成适合 LLM 的 Markdown / JSON，擅长公式、表格与多栏版面。 |
+| [GenOffice](https://github.com/genspark-ai/genoffice) | GUI / CLI / MCP | Win / macOS / Linux | 中等 | 开源 AI 办公套件：在原生 docx、xlsx、pptx、PDF 与 Markdown 上编辑，内置 Agent、CLI 与 MCP。 |
 
 ### 数据与记忆
 
@@ -83,6 +90,8 @@
 | [SQLite](https://www.sqlite.org/cli.html) | SQL / CLI / Python | Win / macOS / Linux | 轻量 | 用单文件数据库保存 Agent 任务、结果和结构化记忆。 |
 | [Qdrant](https://qdrant.tech/documentation/quickstart/) | API / Python | Win / macOS / Linux | 中等 | 提供向量检索与元数据过滤，构建个人语义资料库。 |
 | [Chroma](https://github.com/chroma-core/chroma) | Python / API | Win / macOS / Linux | 中等 | 为本地 RAG 原型保存嵌入并执行语义检索。 |
+| [Graphify](https://github.com/Graphify-Labs/graphify) | CLI / Agent 技能 | Win / macOS / Linux | 中等 | 把代码库、文档、SQL 结构与 PDF 变成可查询的知识图谱，为编码 Agent 提供跨会话的共享上下文。 |
+| [xerj](https://github.com/xerj-org/xerj) | CLI / MCP | Win / macOS / Linux | 轻量 | 单二进制本地搜索引擎与 MCP 服务：为代码、文档、日志、JSONL/CSV 与 PDF 建立 BM25 全文索引。 |
 
 ### 语音能力
 
@@ -104,6 +113,8 @@
 | [OpenMontage](https://github.com/OpenMontageInc/OpenMontage) | CLI / Agent 技能 | Win / macOS / Linux | 模型相关 | 面向 Agent 的开源视频生产系统：12 条制作流水线、100+ 工具与 700+ 技能文件，把编码 Agent 变成视频工作室。 |
 | [PhotoCraft](https://github.com/storytold/photocraft) | GUI | Win / macOS / Linux | 轻量 | 纯 Rust 从零编写的开源照片编辑器，启动快、占用低，适合本地修图与调色。 |
 | [Concat](https://github.com/jub0t/Concat) | MCP / GUI | Win / macOS / Linux | 中等 | 开源的 CapCut 替代品：离线优先的非线性视频剪辑器，基于 FFmpeg，并提供 MCP 接口。 |
+| [Remotion](https://github.com/remotion-dev/remotion) | React / CLI / API | Win / macOS / Linux | 中等 | 用 React 以代码生成视频：组件、时间轴与渲染管线，适合批量生产字幕、片头与数据可视化视频。 |
+| [HyperFrames](https://github.com/heygen-com/hyperframes) | CLI / Agent 技能 | Win / macOS / Linux | 中等 | HeyGen 开源的 AI 视频编辑器与框架：用 HTML/CSS/JS 编排画面，确定性渲染成 MP4，专为 Agent 设计。 |
 
 ### 本地模型与生成
 

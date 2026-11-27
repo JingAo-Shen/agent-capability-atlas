@@ -65,6 +65,20 @@
     "url": "https://learn.microsoft.com/en-us/windows/wsl/about"
   },
   {
+    "name": "cc-switch",
+    "cat": "运行底座",
+    "api": "GUI",
+    "os": "跨平台",
+    "load": "轻量",
+    "tier": "按需安装",
+    "desc": "在一个桌面应用里管理 Claude Code、Codex、OpenCode 等 Agent 的 API 供应商、MCP、技能与提示词。",
+    "connect": "用图形界面切换供应商与配置，避免手改 JSON / TOML / YAML；各 Agent 继续读取原配置文件。",
+    "note": "会改写多个 Agent 的本地配置，切换前先备份；它本身不替代任何 Agent。",
+    "task": "在几套模型供应商之间快速切换，并统一管理 MCP 配置。",
+    "url": "https://github.com/farion1231/cc-switch",
+    "stars": 157622
+  },
+  {
     "name": "DeepSeek Harness",
     "cat": "Agent 框架与技能",
     "api": "CLI",
@@ -121,6 +135,50 @@
     "task": "让 Agent 先写计划再动手，并按清单自查。",
     "url": "https://github.com/obra/superpowers",
     "stars": 327767
+  },
+  {
+    "name": "OpenCode",
+    "cat": "Agent 框架与技能",
+    "api": "CLI / TUI",
+    "os": "跨平台",
+    "load": "中等",
+    "tier": "按需安装",
+    "desc": "开源编码 Agent，提供终端界面与多模型接入，可读写项目、运行命令并管理会话。",
+    "connect": "以 CLI / TUI 在项目目录中运行；通过配置接入模型与 MCP 工具。",
+    "note": "更新较快；自动化执行前应限定可访问目录与命令权限。",
+    "task": "在现有仓库里完成一次小功能修改并自查测试。",
+    "url": "https://github.com/anomalyco/opencode",
+    "stars": 229563
+  },
+  {
+    "name": "odysseus",
+    "cat": "Agent 框架与技能",
+    "api": "Web / Docker",
+    "os": "跨平台",
+    "load": "中等",
+    "tier": "按需安装",
+    "desc": "自托管的 AI 工作台：把对话、Agent、研究、文档、邮件、笔记、日历与本地模型放在一个界面里。",
+    "connect": "Docker Compose 启动后通过浏览器使用；Agent 在同一工作区调用文档与邮件等能力。",
+    "note": "部署与维护成本高于单机 CLI；多用户与外部服务接入需自行配置权限。",
+    "task": "在一个本地工作台里整理邮件、笔记和研究资料。",
+    "url": "https://github.com/odysseus-dev/odysseus",
+    "stars": 96008,
+    "hot": true
+  },
+  {
+    "name": "security-audit-skill",
+    "cat": "Agent 框架与技能",
+    "api": "Agent 技能",
+    "os": "跨平台",
+    "load": "轻量",
+    "tier": "按需安装",
+    "desc": "Cloudflare 开源的安全审计技能：让编码 Agent 按侦察、覆盖、验证、复核等阶段做漏洞审计。",
+    "connect": "作为 Agent 技能装入支持的客户端，对目标仓库执行结构化审计并输出可复核报告。",
+    "note": "仅用于授权目标；自动发现需人工确认，不能替代专业安全评审。",
+    "task": "对一个自有 Web 项目做一轮结构化安全自查。",
+    "url": "https://github.com/cloudflare/security-audit-skill",
+    "stars": 79097,
+    "hot": true
   },
   {
     "name": "Playwright MCP",
@@ -214,6 +272,34 @@
     "url": "https://github.com/lexmount/moli",
     "stars": 24552,
     "hot": true
+  },
+  {
+    "name": "browser-use",
+    "cat": "浏览器与桌面",
+    "api": "Python / CLI",
+    "os": "跨平台",
+    "load": "中等",
+    "tier": "按需安装",
+    "desc": "开源浏览器 Agent 库：模型通过 Python REPL 与 Chrome DevTools 协议在真实浏览器里完成任务。",
+    "connect": "Python 安装后把任务与模型交给它，由 Agent 编写并执行浏览器操作。",
+    "note": "登录、验证码与反爬仍需处理；自动化操作要限定账号与数据范围。",
+    "task": "在真实浏览器里查找可预约时段并填写表单。",
+    "url": "https://github.com/browser-use/browser-use",
+    "stars": 122206
+  },
+  {
+    "name": "Agent-Reach",
+    "cat": "浏览器与桌面",
+    "api": "CLI / MCP",
+    "os": "跨平台",
+    "load": "轻量",
+    "tier": "按需安装",
+    "desc": "给 Agent 补上读取互联网的能力：通过一个 CLI 搜索和阅读 X、Reddit、YouTube、小红书等平台。",
+    "connect": "安装 CLI 并配置平台凭据或浏览器会话，Agent 直接调用命令获取内容。",
+    "note": "依赖平台与账号权限，可能触发风控；抓取内容的使用需遵守平台条款。",
+    "task": "收集某话题在多个平台上的讨论并整理成摘要。",
+    "url": "https://github.com/Panniantong/Agent-Reach",
+    "stars": 115252
   },
   {
     "name": "Pandoc",
@@ -392,6 +478,21 @@
     "stars": 84408
   },
   {
+    "name": "GenOffice",
+    "cat": "文档与 OCR",
+    "api": "GUI / CLI / MCP",
+    "os": "跨平台",
+    "load": "中等",
+    "tier": "按需安装",
+    "desc": "开源 AI 办公套件：在原生 docx、xlsx、pptx、PDF 与 Markdown 上编辑，内置 Agent、CLI 与 MCP。",
+    "connect": "桌面应用或 CLI 打开真实 Office 文件，Agent 通过 MCP/CLI 修改内容并保存回原格式。",
+    "note": "复杂版式与宏的兼容性需实测；协作与云同步能力不如成熟商业套件。",
+    "task": "让 Agent 批量填写表格并导出为原生 xlsx。",
+    "url": "https://github.com/genspark-ai/genoffice",
+    "stars": 13026,
+    "hot": true
+  },
+  {
     "name": "openpyxl",
     "cat": "数据与记忆",
     "api": "Python",
@@ -455,6 +556,35 @@
     "note": "嵌入模型可能需下载或调用云端；注意客户端版本配套。",
     "task": "给个人 PDF 资料建立可更新的语义索引。",
     "url": "https://github.com/chroma-core/chroma"
+  },
+  {
+    "name": "Graphify",
+    "cat": "数据与记忆",
+    "api": "CLI / Agent 技能",
+    "os": "跨平台",
+    "load": "中等",
+    "tier": "按需安装",
+    "desc": "把代码库、文档、SQL 结构与 PDF 变成可查询的知识图谱，为编码 Agent 提供跨会话的共享上下文。",
+    "connect": "作为技能或 CLI 建立索引，Agent 通过查询图谱追踪依赖与组件关系。",
+    "note": "需要先建索引；大型仓库的图谱质量取决于解析覆盖与更新频率。",
+    "task": "在陌生仓库里先查清模块依赖，再动手改代码。",
+    "url": "https://github.com/Graphify-Labs/graphify",
+    "stars": 154113
+  },
+  {
+    "name": "xerj",
+    "cat": "数据与记忆",
+    "api": "CLI / MCP",
+    "os": "跨平台",
+    "load": "轻量",
+    "tier": "按需安装",
+    "desc": "单二进制本地搜索引擎与 MCP 服务：为代码、文档、日志、JSONL/CSV 与 PDF 建立 BM25 全文索引。",
+    "connect": "把目录交给它建索引，Agent 通过命令行或 MCP 查询相关片段。",
+    "note": "偏关键词检索而非语义理解；索引需随文件变化更新。",
+    "task": "在大量日志与文档中快速定位报错相关段落。",
+    "url": "https://github.com/xerj-org/xerj",
+    "stars": 21790,
+    "hot": true
   },
   {
     "name": "faster-whisper",
@@ -606,6 +736,34 @@
     "url": "https://github.com/jub0t/Concat",
     "stars": 21947,
     "hot": true
+  },
+  {
+    "name": "Remotion",
+    "cat": "音视频与图像",
+    "api": "React / CLI / API",
+    "os": "跨平台",
+    "load": "中等",
+    "tier": "按需安装",
+    "desc": "用 React 以代码生成视频：组件、时间轴与渲染管线，适合批量生产字幕、片头与数据可视化视频。",
+    "connect": "以 React 组件编写画面，通过 CLI 或 Node API 渲染成 MP4；Agent 可生成或修改组件后批量渲染。",
+    "note": "公司使用需核对 Remotion 的许可与费用条款；复杂成片仍需剪辑与素材处理。",
+    "task": "把一份数据报告批量渲染成带图表和字幕的短视频。",
+    "url": "https://github.com/remotion-dev/remotion",
+    "stars": 76096
+  },
+  {
+    "name": "HyperFrames",
+    "cat": "音视频与图像",
+    "api": "CLI / Agent 技能",
+    "os": "跨平台",
+    "load": "中等",
+    "tier": "按需安装",
+    "desc": "HeyGen 开源的 AI 视频编辑器与框架：用 HTML/CSS/JS 编排画面，确定性渲染成 MP4，专为 Agent 设计。",
+    "connect": "以 CLI 或 Agent 技能生成项目与渲染；也可用桌面应用手动精修。",
+    "note": "渲染耗时与分辨率、时长相关；复杂成片仍需素材与剪辑判断。",
+    "task": "把一组产品截图和字幕编排成 30 秒演示视频。",
+    "url": "https://github.com/heygen-com/hyperframes",
+    "stars": 91272
   },
   {
     "name": "ComfyUI",
