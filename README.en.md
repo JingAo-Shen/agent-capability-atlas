@@ -19,7 +19,7 @@ Visit the live site above, or open `index.html` in a modern browser. The page ha
 - **Trending**: recent GitHub projects with the most stars.
 - **By task**: office and research, voice and video, reverse engineering, creative work.
 - **Filters**: category, operating system, interface, resource footprint, beginner-friendly, and favorites.
-- **Favorites**: stored in browser localStorage and exportable as a Markdown list.
+- **Favorites & export**: favorites stay in browser localStorage; export favorites, the current view, or the full catalog as Markdown, with a preview first.
 
 ## Tools
 
